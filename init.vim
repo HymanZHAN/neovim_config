@@ -1,14 +1,17 @@
 " file location: ~/.config/nvim/init.vim
 set number
 set termguicolors
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 syntax on
 imap jk <Esc>
-nmap J }
-nmap K {
+nnoremap J }
+nnoremap K {
 tnoremap <Esc> <C-\><C-n>
 
 let mapleader = ' '
-
 nnoremap <leader>h :wincmd h<Cr>
 nnoremap <leader>j :wincmd j<Cr>
 nnoremap <leader>k :wincmd k<Cr>
@@ -37,6 +40,15 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
+
+" Auto closing pairs
+Plug 'windwp/nvim-autopairs'
+
+" Tabout
+Plug 'ijimiji/tabout.nvim'
+
+" toggleterm.nvim
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
